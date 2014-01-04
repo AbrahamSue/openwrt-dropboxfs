@@ -419,8 +419,8 @@ static int hello_write(const char *path, char *buf, size_t size, off_t offset, s
     ru->read_buffer = NULL;
     ru->read_offset = 0;
     ru->read_length = 1024;
-    if( read_from_url_with_callback(ru, NULL, NULL) < 0 ) return 0;
-//    memcpy(buf, "file_content" + offset, size); /* Provide the content. */
+//    if( read_from_url_with_callback(ru, NULL, NULL) < 0 ) return 0;
+    memcpy(buf, "file_content" + offset, size); /* Provide the content. */
     return size;
 }
 static int hello_read(const char *path, char *buf, size_t size, off_t offset, struct fuse_file_info *fi)
