@@ -7,6 +7,7 @@
 #define FUSE_USE_VERSION  26
 #include <fuse.h>
 
+//This hello fs use 
 static const char  *file_path      = "/file";
 static const char   file_content[] = "Hello World!\n";
 static const size_t file_size      = sizeof(file_content)/sizeof(char) - 1;
